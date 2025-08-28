@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Sinha - PhD Student in Physics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+            text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .research-card {
+             cursor: pointer;
+        }
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.75rem;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 4px solid #eff6ff;
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Shivam Sinha</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#overview" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Overview</a>
+                <a href="#research" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Research & Experience</a>
+                <a href="#publications" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Publications</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#overview" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600">Overview</a>
+            <a href="#research" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600">Research & Experience</a>
+            <a href="#publications" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600">Publications</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="flex flex-col md:flex-row items-center mb-20">
+            <div class="md:w-1/3 text-center md:text-left mb-8 md:mb-0">
+                <!-- To use your own image, upload it to a hosting service and paste the URL here -->
+                <img src="https://i.postimg.cc/NfC3D6wF/shivam-sinha-photo.jpg" alt="Shivam Sinha" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover mx-auto md:mx-0 shadow-lg border-4 border-white">
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Shivam Sinha</h1>
+                <h2 class="text-xl md:text-2xl text-blue-600 font-semibold mb-4">PhD Student - Physics</h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    A dedicated and passionate Physics PhD student at IIT Tirupati with a strong foundation in quantum optics, laser spectroscopy, and quantum information theory. My research focuses on developing a two-photon, two-color all-optical atomic clock.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-6">
+                    <a href="mailto:ph24d005@iittp.ac.in" class="text-gray-500 hover:text-blue-600 transition duration-300"><i class="fas fa-envelope text-3xl"></i></a>
+                    <a href="https://www.linkedin.com/in/shivam-sinha-969a66203" target="_blank" class="text-gray-500 hover:text-blue-600 transition duration-300"><i class="fab fa-linkedin text-3xl"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Overview</h2>
+            <div class="section-card">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Education -->
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center"><i class="fas fa-graduation-cap mr-3 text-blue-500"></i>Education</h3>
+                        <div class="relative border-l-2 border-blue-200 pl-8 space-y-8">
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-lg">PhD - Physics</h4>
+                                <p class="text-sm text-gray-600">IIT Tirupati (Jan 2024 - Present)</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-lg">M.Sc. - Physics</h4>
+                                <p class="text-sm text-gray-600">IIT Tirupati (2022-2024)</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-lg">B.Sc. (Hons.) Physics</h4>
+                                <p class="text-sm text-gray-600">Ramjas College, University of Delhi (2019-2022)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skills -->
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center"><i class="fas fa-cogs mr-3 text-blue-500"></i>Skills</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold">Technical</h4>
+                                <p class="text-gray-600">Data Analysis, AMO Experimentation, Modeling & Simulation, MS Office, LaTeX, Origin, Inkscape</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Programming</h4>
+                                <p class="text-gray-600">Python, Matlab, Qiskit, C++</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Soft Skills</h4>
+                                <p class="text-gray-600">Problem-solving, Teamwork, Presentation, Leadership, Multitasking</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Achievements -->
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center"><i class="fas fa-trophy mr-3 text-blue-500"></i>Achievements</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Best Poster Award at "Tachyon Symposium 2024"</li>
+                            <li>Qualified IIT JAM 2022 (Rank 757)</li>
+                            <li>Qualified GATE Physics 2025 (Rank 608)</li>
+                            <li>Qualified NET-JRF July 2024 (98.67 percentile, LS Rank 29)</li>
+                            <li>Awarded Merit cum Means Scholarship at IIT Tirupati</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research and Experience Section -->
+        <section id="research" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Research & Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Research Item 1 -->
+                <div class="research-card section-card" data-modal-target="modal-1">
+                    <h3 class="text-xl font-bold mb-2">Generalized α-Observational Entropy</h3>
+                    <p class="text-sm text-gray-500 mb-3">M.Sc Project | IIT Tirupati</p>
+                    <p class="text-gray-600">Extended the scope of observational entropy by generalizing it to a parameterized version, α-Observational Entropy (α-OE)...</p>
+                </div>
+                <!-- Research Item 2 -->
+                <div class="research-card section-card" data-modal-target="modal-2">
+                    <h3 class="text-xl font-bold mb-2">X-ray Diffraction Simulation Tool</h3>
+                    <p class="text-sm text-gray-500 mb-3">Project | IIT Tirupati</p>
+                    <p class="text-gray-600">Developed a MATLAB-based software to display crystal structures, reciprocal lattices, and X-ray Diffraction patterns...</p>
+                </div>
+                <!-- Research Item 3 -->
+                <div class="research-card section-card" data-modal-target="modal-3">
+                    <h3 class="text-xl font-bold mb-2">Single-atom Heat Engine</h3>
+                    <p class="text-sm text-gray-500 mb-3">Term Paper | IIT Tirupati</p>
+                    <p class="text-gray-600">Studied a single-atom heat engine using a confined calcium ion in a tapered linear Paul trap, exploring thermodynamics...</p>
+                </div>
+                <!-- Research Item 4 -->
+                <div class="research-card section-card" data-modal-target="modal-4">
+                    <h3 class="text-xl font-bold mb-2">Frequency Comb</h3>
+                    <p class="text-sm text-gray-500 mb-3">Term Paper | IIT Tirupati</p>
+                    <p class="text-gray-600">Studied the theoretical background of frequency combs, which are precise tools for measuring and controlling frequencies of light...</p>
+                </div>
+                <!-- Research Item 5 -->
+                <div class="research-card section-card" data-modal-target="modal-5">
+                    <h3 class="text-xl font-bold mb-2">Grover's Algorithm</h3>
+                    <p class="text-sm text-gray-500 mb-3">Term Paper | IIT Tirupati</p>
+                    <p class="text-gray-600">Studied Grover's algorithm and successfully implemented it for 2 and 3 qubits using Qiskit and IBM Quantum Composer...</p>
+                </div>
+                <!-- Research Item 6 -->
+                <div class="research-card section-card" data-modal-target="modal-6">
+                    <h3 class="text-xl font-bold mb-2">Saturation Absorption Spectroscopy</h3>
+                    <p class="text-sm text-gray-500 mb-3">Experiment | IIT Tirupati</p>
+                    <p class="text-gray-600">Investigated the number density of rubidium atoms in a vapor cell at various temperatures and analyzed data using the Voigt profile...</p>
+                </div>
+                 <!-- Research Item 7 -->
+                <div class="research-card section-card" data-modal-target="modal-7">
+                    <h3 class="text-xl font-bold mb-2">Absorption Spectra of Rubidium Atom</h3>
+                    <p class="text-sm text-gray-500 mb-3">Modeling | IIT Tirupati</p>
+                    <p class="text-gray-600">Working on modeling the absorption spectra and saturation absorption spectra of the Rubidium atom using the density matrix formalism...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Publications</h2>
+            <div class="section-card">
+                <h3 class="text-xl font-bold">Generalized α-Observational Entropy</h3>
+                <p class="text-gray-600 italic mt-1">Quantum Information Processing, vol. 24, article 247, 2025.</p>
+                <p class="text-gray-600 mt-2">Authors: Shivam Sinha, N. Majumdar, S. Aravinda</p>
+                <a href="https://doi.org/10.1007/s11128-025-04785-8" target="_blank" class="inline-block mt-3 text-blue-600 hover:underline">
+                    View Publication <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center">
+            <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                I'm always open to discussing new research, projects, or potential collaborations. Feel free to reach out to me.
+            </p>
+            <div class="flex justify-center items-center space-x-8">
+                <a href="mailto:ph24d005@iittp.ac.in" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">
+                    <i class="fas fa-envelope mr-2"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/shivam-sinha-969a66203" target="_blank" class="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition duration-300 shadow-lg">
+                    <i class="fab fa-linkedin mr-2"></i> LinkedIn Profile
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 mt-16 border-t">
+        <p class="text-gray-500">&copy; 2025 Shivam Sinha. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modals Container -->
+    <!-- Modal 1 -->
+    <div id="modal-1" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Generalized α-Observational Entropy</h3>
+            <p class="text-gray-600 mb-6">Extend the scope of observational entropy by generalizing it to a the parameterized version called a Observational entropy (a-OE). We prove various properties of the a-OE, provide a connection between these entropic quantities to thermodynamic properties.</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> methodology, key findings, charts, or links to relevant papers.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div id="modal-2" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">X-ray Diffraction Simulation Tool</h3>
+            <p class="text-gray-600 mb-6">Developed a software that can display crystal structure along with reciprocal lattice and displays the X-ray Diffraction pattern, given a lattice parameter. (Language: MATLAB)</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> screenshots of the tool, the underlying physics principles, and the challenges faced during development.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div id="modal-3" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Single-atom Heat Engine</h3>
+            <p class="text-gray-600 mb-6">Studied a single-atom heat engine using a confined calcium ion in a tapered linear Paul trap. Prepared a detailed report and deliver a presentation on the exploration of the thermodynamics of heat engines at the nanoscale.</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> the theoretical framework, simulation results, and the implications for quantum thermodynamics.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+    <div id="modal-4" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Frequency Comb</h3>
+            <p class="text-gray-600 mb-6">Studied the theoretical background of frequency combs, which are precise tools used for measuring and controlling the frequencies of light. These combs generate a spectrum of equally spaced frequencies, providing ultra-precise time and frequency measurements. Prepared a detailed report and delivered a presentation on the brief introduction to an optical frequency comb.</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> key principles, applications in metrology, and your specific findings from the study.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div id="modal-5" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Grover's Algorithm</h3>
+            <p class="text-gray-600 mb-6">Studied Grover's algorithm and successfully implemented it for 2 and 3 qubits using Qiskit and IBM Quantum Composer. This involved designing and executing quantum circuits to demonstrate the algorithm's efficiency in quantum search problems.</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> the quantum circuits you designed, results from the IBM Quantum Composer, and a comparison with classical search algorithms.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+    <!-- Modal 6 -->
+    <div id="modal-6" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Saturation Absorption Spectroscopy</h3>
+            <p class="text-gray-600 mb-6">Performed experiments in absorption spectroscopy and saturation absorption spectroscopy to investigate the number density of rubidium atoms in a rubidium vapor cell at various temperatures. Analyzed experimental data and performed curve fitting using the Voigt profile, a convolution of Gaussian and Lorentzian transmission curves, to represent the absorption spectra of the rubidium atom accurately.</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> experimental setup, data plots, the results of the Voigt profile fitting, and conclusions.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+     <!-- Modal 7 -->
+    <div id="modal-7" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-4">Absorption Spectra of the Rubidium Atom</h3>
+            <p class="text-gray-600 mb-6">Working on modeling the absorption spectra and saturation absorption spectra of the Rubidium atom using the density matrix formalism. (Language: Python)</p>
+            <p class="text-gray-600 mb-6"><strong>You can add more details here:</strong> the theoretical model, Python code snippets, comparison between simulation and experimental data, and future work.</p>
+            <button class="modal-close-btn bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Mobile Menu ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Modal Logic ---
+        const researchCards = document.querySelectorAll('.research-card');
+        const closeButtons = document.querySelectorAll('.modal-close-btn');
+        const modals = document.querySelectorAll('.modal');
+
+        researchCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const modalId = card.getAttribute('data-modal-target');
+                const modal = document.getElementById(modalId);
+                if(modal) {
+                    modal.classList.remove('hidden');
+                }
+            });
+        });
+
+        function closeModal(modal) {
+            if(modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                closeModal(modal);
+            });
+        });
+
+        // Close modal by clicking on the background overlay
+        modals.forEach(modal => {
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        });
+
+        // Close modal with the 'Escape' key
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                modals.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        closeModal(modal);
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
